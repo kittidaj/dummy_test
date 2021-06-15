@@ -1,9 +1,9 @@
 def GetTestCase() {
-    powershell encoding: 'UTF-8', label:'', returnStdout: false, script: """
+    powershell encoding: 'UTF-8', label:'', returnStdout: false, script: '''
 
         python D:\TDEM\01_CEN\JAMA_Investigation\python_files\GET_TestCase.py
               
-    """
+    '''
 }
 
 

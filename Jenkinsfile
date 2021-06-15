@@ -1,7 +1,7 @@
 def GetTestCase() {
     powershell encoding: 'UTF-8', label:'', returnStdout: false, script: '''
 
-       "D:\anaconda3\python.exe" "D:\TDEM\01_CEN\JAMA_Investigation\python_files\GET_TestCase.py"
+		"D:\anaconda3\python.exe" "D:\TDEM\01_CEN\JAMA_Investigation\python_files\GET_TestCase.py"
               
     '''
 }

@@ -9,7 +9,7 @@ pipeline {
             steps {
                 echo 'Getting TestCase..'
 				powershell 'cd D:/TDEM/01_CEN/JAMA_Investigation/python_files' 
-				powershell '"D:/anaconda3/python.exe" GET_TestCase.py'   
+				powershell '"D:/anaconda3/python.exe" Execute_Test.py'   
 				echo 'Getting TestCase DONE'
             }
         }

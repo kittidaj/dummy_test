@@ -1,20 +1,4 @@
-def GetTestCase() {
-    powershell encoding: 'UTF-8', label:'', returnStdout: false, script: '''
 
-        cd D:\TDEM\01_CEN\JAMA_Investigation\python_files
-        python Get_TestCase.py
-              
-    '''
-}
-
-def ExecuteTest() {
-    powershell encoding: 'UTF-8', label:'', returnStdout: false, script: '''
-
-        cd D:\TDEM\01_CEN\JAMA_Investigation\python_files
-        python Execute_Test.py
-              
-    '''
-}
 
 
 pipeline {
@@ -24,7 +8,7 @@ pipeline {
         stage('Get_TestCase') {
             steps {
                 echo 'Getting TestCase..'
-				   
+				powershell '"Hello, World!"'   
 				echo 'Getting TestCase DONE'
             }
         }

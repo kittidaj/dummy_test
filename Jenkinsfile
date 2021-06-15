@@ -6,12 +6,14 @@ pipeline {
             steps {
                 echo 'Getting TestCase..'
 				sh 'python "D:\TDEM\01_CEN\JAMA_Investigation\python_files\GET_TestCase.py"'
+				echo 'Getting TestCase DONE'
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing..'
 				sh 'python Execute_Test.py'
+				echo 'Testing DONE'
             }
         }
         stage('Update_Result') {

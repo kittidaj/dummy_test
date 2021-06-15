@@ -1,4 +1,11 @@
-powerShell(String command)
+def moveOutputFile() {
+    powershell encoding: 'UTF-8', label:'', returnStdout: false, script: """
+
+        cd ${ENV:WORKSPACE}\\${ENV:TOOL_FOLDER}
+        python moveExcelFileResult.py ${ENV:WORKSPACE} ${ENV:TOOL_FOLDER} ${ENV:OUTPUT_FOLDER}
+              
+    """
+}
 
 
 pipeline {
@@ -8,7 +15,7 @@ pipeline {
         stage('Get_TestCase') {
             steps {
                 echo 'Getting TestCase..'
-				powerShell('python "D:\TDEM\01_CEN\JAMA_Investigation\python_files\GET_TestCase.py"')
+				moveOutputFile()   
 				echo 'Getting TestCase DONE'
             }
         }

@@ -1,8 +1,8 @@
 def moveOutputFile() {
     powershell encoding: 'UTF-8', label:'', returnStdout: false, script: """
 
-        cd ${ENV:WORKSPACE}\\${ENV:TOOL_FOLDER}
-        python moveExcelFileResult.py ${ENV:WORKSPACE} ${ENV:TOOL_FOLDER} ${ENV:OUTPUT_FOLDER}
+        cd D:\TDEM\01_CEN\JAMA_Investigation\python_files
+        python Get_TestCase.py
               
     """
 }

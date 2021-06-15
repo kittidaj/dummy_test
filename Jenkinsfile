@@ -8,7 +8,8 @@ pipeline {
         stage('Get_TestCase') {
             steps {
                 echo 'Getting TestCase..'
-				powershell 'python "D:/TDEM/01_CEN/JAMA_Investigation/python_files/GET_TestCase.py"'   
+				powershell 'cd D:\TDEM\01_CEN\JAMA_Investigation\python_files' 
+				powershell 'python GET_TestCase.py'   
 				echo 'Getting TestCase DONE'
             }
         }

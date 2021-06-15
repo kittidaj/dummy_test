@@ -1,5 +1,7 @@
 pipeline {
     agent any
+	Started by user admin
+	Running as SYSTEM
 
     stages {
         stage('Get_TestCase') {

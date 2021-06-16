@@ -6,7 +6,7 @@ pipeline {
             steps {
                 echo 'Getting TestCase..'
 				echo "${ENV:WORKSPACE}"
-				powershell(python)
+				powershell(python test.py)
 				echo 'Getting TestCase DONE'
             }
         }

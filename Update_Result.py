@@ -13,7 +13,7 @@ from py_jama_rest_client.client import JamaClient
 
 def Update_Result():
     #Insert code of Execute Test here
-    testcase_lists = [] = []
+    testcase_lists = []
     result_lists = []
     
     with open(os.path.join('testcase.txt'), 'r') as the_file:
@@ -26,6 +26,17 @@ def Update_Result():
     
     #print (testcase)
     
+    judgment_result = []
+    step_no = 0
+    for step in testcase_lists:
+        if(step==result_lists[step_no]):
+            judgment_result.append(1)
+            print("STEP"+str(step_no+1)+": Passed" )
+        else:
+            judgment_result.append(0)
+            print("STEP"+str(step_no+1)+": Failed" )
+        step_no = step_no + 1
+            
 
     
     # {

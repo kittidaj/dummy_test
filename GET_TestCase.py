@@ -54,13 +54,18 @@ def GET_TestCase():
     else:
         f = open("testcase.txt", "w")
         f.close()
-      
-      
+    
+    current_line = 0
     with open(os.path.join('testcase.txt'), 'a') as the_file:
         for item in action:
             expected = item['expectedResult']
-            the_file.write(expected+'\n')
-
+            if (current_line!=len(action)-1):
+                the_file.write(expected+'\n')
+            else:
+                 the_file.write(expected)
+                 
+            current_line = current_line + 1
+    
             
     print("GET TestCase Completed")
     

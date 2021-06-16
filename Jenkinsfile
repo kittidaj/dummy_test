@@ -1,3 +1,11 @@
+def GetTestCase() {
+    powershell encoding: 'UTF-8', label:'', returnStdout: false, script: '''
+
+        cd ${ENV:WORKSPACE}
+        python Get_TestCase.py
+              
+    '''
+}
 
 pipeline {
     agent any
@@ -28,6 +36,7 @@ pipeline {
             steps {
                 echo 'Getting TestCase..'
 				echo "${ENV:WORKSPACE}"
+				GetTestCase()
 				echo 'Getting TestCase DONE'
             }
         }

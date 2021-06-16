@@ -1,6 +1,7 @@
 def GetTestCase() {
-    powershell encoding: 'UTF-8', label:'', returnStdout: false, script: """
+    powershell script: """
 
+		echo 'TESTING'
         cd ${ENV:WORKSPACE}
         python test.py
               

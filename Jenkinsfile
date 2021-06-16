@@ -6,7 +6,7 @@ pipeline {
             steps {
                 echo 'Getting TestCase..'
 				echo "${ENV:WORKSPACE}"
-				powershell("D:/anaconda3/python.exe GET_TestCase.py")
+				powershell("python GET_TestCase.py")
 				echo 'Getting TestCase DONE'
             }
         }

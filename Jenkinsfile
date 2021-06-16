@@ -1,10 +1,8 @@
 def GetTestCase() {
-    powershell script: """
 
-		echo 'TESTING'
-        python test.py
-              
-    """
+	powershell (cd ${ENV:WORKSPACE})
+    powershell ("D:/anaconda3/python.exe" "test.py")
+
 }
 
 pipeline {

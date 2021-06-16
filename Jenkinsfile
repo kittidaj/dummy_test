@@ -2,7 +2,6 @@ def GetTestCase() {
     powershell script: """
 
 		echo 'TESTING'
-        cd ${ENV:WORKSPACE}
         python test.py
               
     """

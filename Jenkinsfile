@@ -8,7 +8,7 @@ pipeline {
         stage('Get_TestCase') {
             steps {
                 echo 'Getting TestCase..'
-				echo {ENV:WORKSPACE}
+
 				echo 'Getting TestCase DONE'
             }
         }

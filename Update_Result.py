@@ -72,15 +72,9 @@ def Update_Result():
     #             action.append(step)
     
     
-    test = jama_client.get_item(8036)
-    test = jama_client.get_test
+
     
     testrun_list = jama_client.get_testruns(8060)
-    
-    
-    
-    
-    
     
     testcycle_list = jama_client.get_test_cycle(46);
 

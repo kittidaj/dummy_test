@@ -1,10 +1,3 @@
-def GetTestCase() {
-
-	powershell (cd ${ENV:WORKSPACE})
-    powershell ("D:/anaconda3/python.exe" "test.py")
-
-}
-
 pipeline {
     agent any
 	
@@ -13,7 +6,8 @@ pipeline {
             steps {
                 echo 'Getting TestCase..'
 				echo "${ENV:WORKSPACE}"
-				GetTestCase()
+				powershell(cd ${ENV:WORKSPACE})
+				powershell(python)
 				echo 'Getting TestCase DONE'
             }
         }

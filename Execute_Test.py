@@ -17,7 +17,7 @@ import sys
 def Execute_Test():
     #Insert code of Execute Test here
     A = Set_A(1)
-    B = Set_B(2)
+    B = Set_B(5)
     SUM = SUM_A_B(A, B)
 
     
